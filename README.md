@@ -5,7 +5,7 @@ Ez a projekt a hazai fogyasztás és termelés adatainak lineáris regressziós 
 A statisztika eszköztárában a lineáris regresszió egy olyan paraméteres regressziós modell, 
 mely feltételezi a magyarázó- (X) és a magyarázott változó közti lineáris kapcsolatot. 
 Ez azt jelenti, hogy lineáris regresszió becslése során a mintavételi adatok 
-pontjai egy egyenest illeszt rá.
+pontjaira egy egyenest illeszt rá.
 
 
 Tartalom
@@ -27,7 +27,7 @@ Előfeltételek
     matplotlib
     scikit-learn
     scipy
-    streamlit (ha a Streamlit-alapú webes verziót is használni szeretnéd)
+    streamlit 
 
 Telepítés
 
