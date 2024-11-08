@@ -1,0 +1,17 @@
+# Szükséges modulok és könyvtárak telepítése
+import subprocess  # Alrendszeri parancsok futtatására szolgáló modul
+
+# Függvény egy modul telepítéséhez
+def install(module):
+    # A pip telepítési parancs futtatása a modul telepítésére
+    subprocess.check_call(['pip', 'install', module])
+    # Visszajelzés a felhasználónak, hogy a modul sikeresen telepítve lett
+    print(f"The module {module} was installed")
+
+# Az alkalmazás futtatásához szükséges modulok telepítése
+install('scikit-learn')  # Gépitanulási könyvtár
+install('numpy')         # Numerikus számítási könyvtár
+install('pandas')        # Adatkezelési és -elemzési könyvtár
+install('matplotlib')    # Grafikonok és ábrák készítéséhez
+install('streamlit')     # Webalkalmazás készítéséhez, adatvizualizációhoz
+install('scipy')         # Tudományos számítási könyvtár

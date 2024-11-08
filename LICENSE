@@ -2,27 +2,27 @@ BSD 3-Clause License
 
 Copyright (c) 2024, Verfurdo
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Újraelosztás és felhasználás forrás- és bináris formában, akár nélküle
+módosítása megengedett, feltéve, hogy a következő feltételek teljesülnek:
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+1. A forráskód újraterjesztésekor meg kell őrizni a fenti szerzői jogi megjegyzést, ezt
+ feltételek listája és a következő felelősségkizárás.
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+2. A bináris formában történő újraterjesztésnek tartalmaznia kell a fenti szerzői jogi megjegyzést,
+ ez a feltételek listája és a következő felelősségkizárás a dokumentációban
+ és/vagy a terjesztéshez mellékelt egyéb anyagok.
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+3. Sem a szerzői jog tulajdonosának, sem annak nevei
+ a közreműködők felhasználhatók a termékből származó termékek támogatására vagy népszerűsítésére
+ ezt a szoftvert külön előzetes írásbeli engedély nélkül.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+EZT A SZOFTVERT A SZERZŐI JOGOK TULAJDONOSAI ÉS KÖZREMŰKÖDŐI BIZTOSÍTJÁK „AHOGY VAN”
+ÉS BÁRMELY KIFEJEZETT VAGY VÉLEMEZTETETT GARANCIA, BELEÉRTVE, DE NEM KORLÁTOZOTT,
+AZ ELADHATÓSÁGRA ÉS A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA VONATKOZÓ BIZTOSÍTÁSI GARANCIA
+ELFOGADVA. A SZERZŐI JOG TULAJDONOSA VAGY A KÖZREMŰKÖDŐK SEMMILYEN ESETBEN NEM VÁLLALNAK FELELŐSSÉGET
+BÁRMELY KÖZVETLEN, KÖZVETETT, VÉLETLENES, KÜLÖNLEGES, PÉLDA VAGY KÖVETKEZMÉNYESSÉGRE
+KÁROK (BELEÉRTVE, DE NEM KIZÁRÓLAGOS CSERE ÁRUK BESZERZÉSÉT VAGY
+SZOLGÁLTATÁSOK; HASZNÁLAT, ADATOK VAGY NYERESÉG ELVESZTÉSE; VAGY ÜZLETI SZAKADÁS) AZONBAN
+OKOZTA ÉS BÁRMELY FELELŐSSÉG ELMÉLETE, AKÁR SZERZŐDÉSBEN, SZIGORÚ FELELŐSSÉG,
+VAGY A HASZNÁLATBÓL KERÜLŐ KÖVETELMÉNY (BEÉLETETETT Hanyagságból VAGY EGYÉBEN)
+E SZOFTVER MÉRETÉRŐL, HA AZ ILYEN KÁROK LEHETŐSÉGÉRŐL TÁJÉKOZTATJÁK.
