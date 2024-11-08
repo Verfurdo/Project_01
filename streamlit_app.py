@@ -6,7 +6,7 @@ from visualization import plot  # Grafikon megjelenítése
 # Streamlit alkalmazás futtatásáért felelős függvény
 def run_streamlit_app():
     # Alkalmazás címének beállítása
-    st.title("Hazai Fogyasztás és Termelés Elemzése")
+    st.title("Fogyasztás és Termelés Elemzése")
 
     # Adatok betöltése és elemzése a regression_analysis modul segítségével
     x_log, y_log, mse, r2 = regression_analysis.load_and_analyze_data()
