@@ -17,7 +17,7 @@ def create_plot(x_log, y_log, y_pred_log):
     ax.plot(x_log, y_pred_log, color="k", lw=2.5)  # Fekete vonal vastagabb vonalvastagsággal
     
     # Cím és tengelyfeliratok beállítása
-    ax.set_title('Hazai fogyasztás összesen (logaritmikus skálán)')  # Grafikon cím
+    ax.set_title('Fogyasztás összesen')  # Grafikon cím
     ax.set_xlabel('Termelés (millió liter)')  # X tengely felirata
     ax.set_ylabel('Fogyasztás (millió liter)')  # Y tengely felirata
     
