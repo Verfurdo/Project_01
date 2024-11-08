@@ -33,7 +33,7 @@ Telepítés
 
     Könyvtárak telepítése
     Minden szükséges modult telepíthetsz a következő paranccsal:
-    pip install -r requirements.txt
+    pip install -r requirements.txt vagy futtasd a !requirements.bat fájlt
 
     Alternatív megoldásként futtathatod az install_modules.py fájlt, amely automatikusan telepíti a függőségeket:
     python install_modules.py
@@ -49,7 +49,7 @@ Használat
     Streamlit alapú megjelenítés
     Futtasd a project.py fájlt a Streamlit segítségével:
 
-    streamlit run project.py
+    streamlit run project.py vagy futtasd a !start.bat fájlt
 
     Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.
 
