@@ -1,13 +1,13 @@
 # Project_01
 
-Linear_regression
+Ez a projekt a hazai fogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A sormerleg.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket logaritmikus skálán, beleértve a lineáris trendet is.
 
 A statisztika eszköztárában a lineáris regresszió egy olyan paraméteres regressziós modell, 
 mely feltételezi a magyarázó- (X) és a magyarázott változó közti lineáris kapcsolatot. 
 Ez azt jelenti, hogy lineáris regresszió becslése során a mintavételi adatok 
-pontfelhőjére igyekszünk egyenest illeszteni.
+pontjai egy egyenest illeszt rá.
 
-Ez a projekt a hazai fogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A sormerleg.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket logaritmikus skálán, beleértve a lineáris trendet is.
+
 Tartalom
 
     Előfeltételek
@@ -57,8 +57,10 @@ Fájlok magyarázata
 
     install_modules.py: Függőségek telepítéséhez használt script.
     project.py: A Streamlit alkalmazás indítófájlja, amely a streamlit_app.py modult használja a webes megjelenítéshez.
-    streamlit_app.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py és plot.py modulokat használja az adatelemzéshez és a vizualizációhoz.
-    regression_analysis.py: Az adatok elemzéséhez, tisztításához és a logaritmikus transzformáció elvégzéséhez szükséges függvényeket tartalmazza.
+    streamlit_app.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py 
+                      és plot.py modulokat használja az adatelemzéshez és a vizualizációhoz.
+    regression_analysis.py: Az adatok elemzéséhez, tisztításához és a logaritmikus transzformáció 
+                            elvégzéséhez szükséges függvényeket tartalmazza.
     plot.py: A logaritmikus transzformált adatok grafikus ábrázolásáért felelős.
 
 Kimenet
