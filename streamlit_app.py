@@ -15,6 +15,6 @@ def run_streamlit_app():
     fig = plot.create_plot(x_log, y_log, regression_analysis.get_regression_line(x_log, y_log))
     st.pyplot(fig)
 
-    # Kiírjuk a fontosabb metrikákat, például az MSE-t és az R2-t
+    # Kiírjuk a fontosabb metrikákat az MSE-t és az R2-t
     st.write(f"Mean Squared Error (MSE): {mse}")
     st.write(f"R-squared (R2): {r2}")
