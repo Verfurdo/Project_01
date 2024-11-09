@@ -14,7 +14,7 @@ def create_plot(x_log, y_log, y_pred_log):
     ax.plot(x_log, y_log, linestyle='-', color='blue', linewidth=1.5)  # Kék vonal
     
     # Regressziós egyenes megjelenítése, amelyet a modell illesztett az adatokra
-    ax.plot(x_log, y_pred_log, color="k", lw=2.5)  # Fekete vonal vastagabb vonalvastagsággal
+    ax.plot(x_log, y_pred_log, color="red", lw=2.5)  # Piros vonal vastagabb vonalvastagsággal
     
     # Cím és tengelyfeliratok beállítása
     ax.set_title('Hazai Sörfogyasztás összesen')  # Grafikon cím
