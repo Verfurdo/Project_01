@@ -8,6 +8,12 @@ def run_streamlit_app():
     # Alkalmazás címének beállítása
     st.title("Fogyasztás és Termelés Elemzése")
 
+    # Adat fájl meglétének ellenőrzése
+    result = regression_analysis.load_and_analyze_data()
+    if result is None:
+        st.error("A szükséges CSV fájl nem található. Helyezd a fájlt a 'data' mappába, és próbáld újra.")
+        return  # Megszakítja a végrehajtást, ha a fájl nem található
+
     # Adatok betöltése és elemzése a regression_analysis modul segítségével
     x_log, y_log, mse, r2 = regression_analysis.load_and_analyze_data()
 
