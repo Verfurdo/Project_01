@@ -1,6 +1,6 @@
 # Project_01
 
-Ez a projekt a hazai sörfogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A sormerleg.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket logaritmikus skálán, beleértve a lineáris trendet is.
+Ez a projekt a hazai sörfogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A stadat-nep0013-22.1.1.13-hu.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket beleértve a lineáris regresszió egyenesét is.
 
 A statisztika eszköztárában a lineáris regresszió egy olyan paraméteres regressziós modell, 
 mely feltételezi a magyarázó- (X) és a magyarázott változó közti lineáris kapcsolatot. 
