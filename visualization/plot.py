@@ -1,28 +1,40 @@
+# visualization/plot.py
 # Szükséges könyvtárak importálása
 import matplotlib.pyplot as plt
 import numpy as np
 
 # Függvény a logaritmikus adatokat megjelenítő grafikon létrehozására
-def create_plot(x_log, y_log, y_pred_log):
+def create_plot(x_log, y_log, y_pred_log, mse, r2):
+    # Biztosítjuk, hogy x_log és y_log NumPy tömbökké legyenek konvertálva
+    x_log = np.array(x_log)
+    y_log = np.array(y_log)
+    
     # Létrehozunk egy új ábrát és tengelyeket, 9x9-es méretben
     fig, ax = plt.subplots(figsize=(9, 9))
     
     # Az eredeti adatpontok megjelenítése (szétszórt pontokként)
-    ax.scatter(x_log, y_log, s=60, alpha=0.7, edgecolors="k")  # Pontok mérete, átlátszósága, körvonala
+    ax.scatter(x_log, y_log, s=60, alpha=0.7, edgecolors="k", c='green', label="Adatpontok")  # Pontok mérete, színe, átlátszósága, körvonala
     
     # Az adatpontokat összekötő vonal megjelenítése
-    ax.plot(x_log, y_log, linestyle='-', color='blue', linewidth=1.5)  # Kék vonal
+    ax.plot(x_log, y_log, linestyle='-', color='blue', linewidth=1.5, label="Adatpontok közötti vonal")
     
-    # Regressziós egyenes megjelenítése, amelyet a modell illesztett az adatokra
-    ax.plot(x_log, y_pred_log, color="red", lw=2.5)  # Piros vonal vastagabb vonalvastagsággal
+    # Regressziós egyenes megjelenítése
+    ax.plot(x_log, y_pred_log, color="red", lw=2.5, label="Regressziós egyenes")
     
+    # MSE és R² értékek kiírása a grafikonon
+    ax.text(0.05, 0.95, f'MSE: {mse:.4f}\nR²: {r2:.4f}', transform=ax.transAxes, 
+            fontsize=12, verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8))
+
     # Cím és tengelyfeliratok beállítása
-    ax.set_title('Hazai Sörfogyasztás összesen (Logaritmikus skálán)')  # Grafikon cím
+    ax.set_title('Hazai Sörfogyasztás összesen (Logaritmikus transzformációval)')  # Grafikon cím
     ax.set_xlabel('Termelés (millió liter)')  # X tengely felirata
     ax.set_ylabel('Fogyasztás (millió liter)')  # Y tengely felirata
     
     # Rácsvonalak hozzáadása a jobb átláthatóság érdekében
     ax.grid(True)
-    
+
+    # Jelmagyarázat hozzáadása
+    ax.legend()
+
     # Az elkészült grafikon (fig) visszaadása a Streamlit alkalmazás számára
     return fig
