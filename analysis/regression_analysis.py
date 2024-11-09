@@ -15,9 +15,8 @@ def load_and_analyze_data():
         sep=";",                    # Adatok elválasztója (pontosvessző)
         encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson
         skipinitialspace=True,      # Szóközök eltávolítása az értékek körül
-        skiprows=[0]                # Az első sor kihagyása (fejléccel van ellátva)
-)
-    
+        skiprows=[0])                # Az első sor kihagyása (fejléccel van ellátva)
+               
     # Tisztítás és átalakítás: a felesleges szóközök és vesszők cseréje
     df = df.replace(" ", "", regex=True)  # Megmaradt szóközök eltávolítása
     df = df.replace(',', '.', regex=True)  # Vesszők cseréje pontokra, hogy a számok float típusúak lehessenek
