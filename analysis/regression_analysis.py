@@ -19,7 +19,7 @@ def load_and_analyze_data():
 )
     
     # Tisztítás és átalakítás: a felesleges szóközök és vesszők cseréje
-    df = df.replace(" ", "", regex=True)  # Szóközök eltávolítása
+    df = df.replace(" ", "", regex=True)  # Megmaradt szóközök eltávolítása
     df = df.replace(',', '.', regex=True)  # Vesszők cseréje pontokra, hogy a számok float típusúak lehessenek
     x = df.iloc[2:, 1].astype(float)  # X tengely adatainak kiválasztása és float típusra alakítása
     y = df.iloc[2:, 7].astype(float)  # Y tengely adatainak kiválasztása és float típusra alakítása
