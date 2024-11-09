@@ -9,8 +9,13 @@ from scipy import stats
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():
     # Adatok betöltése egy CSV fájlból
-    src_data = os.path.join("data", "sormerleg.csv")
-    df = pd.read_csv(src_data, sep=";", encoding="ISO-8859-1", skipinitialspace=True, skiprows=[0])
+   src_data = os.path.join("data", "sormerleg.csv")  # A CSV fájl elérési útjának meghatározása
+    df = pd.read_csv(src_data,  # Fájl elérési útja a Data mappából
+    sep=";",                    # Adatok elválasztója (pontosvessző)
+    encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson
+    skipinitialspace=True,      # Szóközök eltávolítása az értékek körül
+    skiprows=[0]                # Az első sor kihagyása (fejléccel van ellátva)
+)
     
     # Tisztítás és átalakítás: a felesleges szóközök és vesszők cseréje
     df = df.replace(" ", "", regex=True)  # Szóközök eltávolítása
@@ -34,7 +39,7 @@ def load_and_analyze_data():
 
     return x_log, y_log, mse, r2  # Eredmények visszaadása
 
-# Regressziós egyenes előrejelzésére szolgáló függvény
+# Regressziós egyenes illesztésére szolgáló függvény
 def get_regression_line(x_log, y_log):
     # Lineáris regresszió ismételt illesztése, hogy a regressziós egyenest előállítsuk
     model = LinearRegression()
