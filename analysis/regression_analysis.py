@@ -10,8 +10,8 @@ from scipy import stats
 def load_and_analyze_data():
     # Adatok betöltése egy CSV fájlból
     src_data = os.path.join("data", "sormerleg.csv")  # A CSV fájl elérési útjának meghatározása
-    df = pd.read_csv(               # Pandas könyvtár read_csv függvényét használja arra, hogy egy CSV fájl adatait betöltse)
-        src_data,                   # Fájl betöltve src_data-ba 
+    df = pd.read_csv(               # Pandas könyvtár read_csv függvényét használja arra, hogy egy CSV fájl adatait betöltse
+        src_data,                   # A CSV fájl elérési útja 
         sep=";",                    # Adatok elválasztója (pontosvessző)
         encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson
         skipinitialspace=True,      # Szóközök eltávolítása az értékek körül
