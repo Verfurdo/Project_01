@@ -11,7 +11,7 @@ def load_and_analyze_data():
     # Adatok betöltése egy CSV fájlból
     src_data = os.path.join("data", "sormerleg.csv")  # A CSV fájl elérési útjának meghatározása
     df = pd.read_csv(
-        src_data,  # Fájl elérési útja a Data mappából
+        src_data,                   # Fájl elérési útja a Data mappából
         sep=";",                    # Adatok elválasztója (pontosvessző)
         encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson
         skipinitialspace=True,      # Szóközök eltávolítása az értékek körül
