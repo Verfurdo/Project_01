@@ -31,7 +31,7 @@ Előfeltételek
 
 Telepítés
 
-    Könyvtárak telepítése
+    Könyvtárak telepítése requirements mappában található
     Minden szükséges modult telepíthetsz a következő paranccsal:
     pip install -r requirements.txt vagy futtasd a !requirements.bat fájlt
 
@@ -41,7 +41,7 @@ Telepítés
 
 Adatfájl 
 
-    Data mappában található a sormerleg.csv fájl az elemzések ezt a fájlt használják forrásként. 
+    Data mappában található a stadat-nep0013-22.1.1.13-hu.csv fájl az elemzések ezt a fájlt használják forrásként. 
     Az adatok a KSH statisztikai adatbázisából származnak.
 
 Használat
@@ -49,8 +49,8 @@ Használat
     Streamlit alapú megjelenítés
     Futtasd a project.py fájlt a Streamlit segítségével:
 
-    streamlit run project.py vagy futtasd a !start.bat fájlt
-
+    streamlit run project.py vagy futtasd a project.bat fájlt az elindításhoz
+ 
     Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk, így ideális dashboardok, jelentések fejlesztésére.
 
 Fájlok magyarázata
