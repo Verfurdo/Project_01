@@ -65,7 +65,7 @@ Fájlok magyarázata
 
 Kimenet
 
-    Metrikák a konzolban:
+    Metrikák:
         Mean Squared Error (MSE): A regressziós modell hibáját méri.
         R-squared (R2): A modell illeszkedésének pontosságát mutatja.
 
