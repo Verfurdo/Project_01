@@ -8,8 +8,16 @@ from scipy import stats
 
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():
+    
     # Adatok betöltése egy CSV fájlból
     src_data = os.path.join("data", "stadat-nep0013-22.1.1.13-hu.csv")  # A CSV fájl elérési útjának meghatározása
+    
+    # Fájl létezésének ellenőrzése
+    if not os.path.exists(src_data):
+        print("A fájl nem létezik, kérlek ellenőrizd, vagy helyezd a fájlt a 'data' mappába!")
+        return None
+    
+    # Adatok beolvasása, ha a fájl létezik
     df = pd.read_csv(               # Pandas könyvtár read_csv függvényét használja arra, hogy egy CSV fájl adatait betöltse
         src_data,                   # A CSV fájl elérési útja 
         sep=";",                    # Adatok elválasztója (pontosvessző)
