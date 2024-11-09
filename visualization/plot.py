@@ -17,7 +17,7 @@ def create_plot(x_log, y_log, y_pred_log):
     ax.plot(x_log, y_pred_log, color="red", lw=2.5)  # Piros vonal vastagabb vonalvastagsággal
     
     # Cím és tengelyfeliratok beállítása
-    ax.set_title('Hazai Sörfogyasztás összesen')  # Grafikon cím
+    ax.set_title('Hazai Sörfogyasztás összesen (Logaritmikus skálán)')  # Grafikon cím
     ax.set_xlabel('Termelés (millió liter)')  # X tengely felirata
     ax.set_ylabel('Fogyasztás (millió liter)')  # Y tengely felirata
     
