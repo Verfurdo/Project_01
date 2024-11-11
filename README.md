@@ -1,4 +1,4 @@
-# Project_01
+# Lineáris Regresszió
 
 Ez a projekt a hazai sörfogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A stadat-nep0013-22.1.1.13-hu.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket beleértve a lineáris regresszió egyenesét is.
 
