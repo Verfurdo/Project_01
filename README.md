@@ -54,9 +54,9 @@ Használat
 
 Fájlok magyarázata
 
-    install_modules.py: Függőségek telepítéséhez használt script.
+    install_modules.py: Függőségek telepítéséhez használt python script.
     project.py: A Streamlit alkalmazás indítófájlja, amely a streamlit_app.py modult használja a webes megjelenítéshez.
-    streamlit_app.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py 
+    streamlit_module.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py 
                       és plot.py modulokat használja az adatelemzéshez és a vizualizációhoz.
     regression_analysis.py: Az adatok elemzéséhez, tisztításához és a logaritmikus transzformáció 
                             elvégzéséhez szükséges függvényeket tartalmazza.
