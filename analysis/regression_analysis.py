@@ -1,10 +1,10 @@
 # Szükséges könyvtárak importálása
-import os
-import pandas as pd
-import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
-from scipy import stats
+import os  # Operációs rendszerrel kapcsolatos műveletekhez, pl. fájlok elérési útjának kezelése
+import pandas as pd  # Adatok beolvasása és manipulálása DataFrame-ek segítségével
+import numpy as np  # Numerikus műveletek és tömbkezelés
+from sklearn.linear_model import LinearRegression  # Lineáris regressziós modell importálása
+from sklearn.metrics import mean_squared_error, r2_score  # Modell értékeléséhez szükséges metrikák
+from scipy import stats  # Statisztikai műveletekhez, pl. kiugró értékek szűrésére
 
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():
@@ -31,11 +31,21 @@ def load_and_analyze_data():
     x = df.iloc[2:, 1].astype(float)  # X tengely adatainak kiválasztása és float típusra alakítása
     y = df.iloc[2:, 7].astype(float)  # Y tengely adatainak kiválasztása és float típusra alakítása
     
-    # Logaritmikus transzformáció lineáris regresszió pontosabb illesztésére
-    x_log = np.log(x)
-    y_log = np.log(y)
+    # Kiugró értékek szűrése a Z-score alapján
+    x_z_scores = np.abs(stats.zscore(x))
+    y_z_scores = np.abs(stats.zscore(y))
+    threshold = 3  # Kiugró érték küszöbe
+
+    # Csak azokat az adatokat tartjuk meg, ahol mindkét Z-score érték kisebb a küszöbnél
+    mask = (x_z_scores < threshold) & (y_z_scores < threshold)
+    x_filtered = x[mask]
+    y_filtered = y[mask]
     
-    # Lineáris regresszió illesztése a logaritmikus adatokra
+    # Logaritmikus transzformáció alkalmazása a lineáris regresszió pontosabb illesztésére a szűrt adatokon
+    x_log = np.log(x_filtered)
+    y_log = np.log(y_filtered)
+    
+    # Lineáris regresszió illesztése
     model = LinearRegression()
     x_log_reshaped = x_log.values.reshape(-1, 1)  # Átalakítás a modell számára
     model.fit(x_log_reshaped, y_log)  # Modell illesztése
