@@ -43,7 +43,7 @@ def load_and_analyze_data():
     x_filtered = x[mask]
     y_filtered = y[mask]
     
-    # Logaritmikus transzformáció alkalmazása a lineáris regresszió pontosabb illesztésére a szűrt adatokon
+    # Logaritmikus transzformáció alkalmazása a lineáris regresszió pontosabb illesztésére
     x_log = np.log(x_filtered)
     y_log = np.log(y_filtered)
     
