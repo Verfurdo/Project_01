@@ -54,8 +54,8 @@ def load_and_analyze_data():
     y_pred_log = model.predict(x_log_reshaped)  # Előrejelzések készítése
 
     # Metrikák kiszámítása az illeszkedés minőségének értékeléséhez
-    mse = mean_squared_error(y_log, y_pred_log)  # Négyzetes hibák átlaga (MSE)
-    r2 = r2_score(y_log, y_pred_log)  # R² mutató, amely a modell magyarázóképességét méri
+    mse = mean_squared_error(y_log, y_pred_log)  # Négyzetes hibák átlaga (MSE), akkor a legjobb, ha az értéke minél közelebb van a 0-hoz. 
+    r2 = r2_score(y_log, y_pred_log)  # R² mutató, amely a modell illeszkedésének pontosságát méri, 1.0 a tökéletes illeszkedés
 
     return x_log, y_log, mse, r2  # Eredmények visszaadása
 
