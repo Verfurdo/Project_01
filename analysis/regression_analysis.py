@@ -19,7 +19,7 @@ def load_and_analyze_data():
         print("A fájl nem létezik, kérlek ellenőrizd, vagy helyezd a fájlt a 'data' mappába!")
         return None
     
-    # Adatok beolvasása, ha a fájl létezik
+    # Adatok beolvasása ha a fájl megtalálható
     df = pd.read_csv(               # a CSV fájl adatainak betöltése dataframe-be
         src_data,                   # A CSV fájl elérése
         sep=";",                    # Adatok elválasztója (pontosvessző)
