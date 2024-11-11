@@ -1,7 +1,7 @@
 # analysis/regression_analysis.py  -  Adatok elemzése modul
 
 # Szükséges könyvtárak importálása
-import os  # Operációs rendszerrel kapcsolatos műveletekhez, (fájlok elérési útjának kezelése)
+import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
 import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segítségével
 import numpy as np  # Numerikus műveletek és tömbkezelés
 from sklearn.linear_model import LinearRegression  # Lineáris regressziós modell importálása
@@ -20,7 +20,7 @@ def load_and_analyze_data():
         return None
     
     # Adatok beolvasása ha a fájl megtalálható
-    df = pd.read_csv(               # a CSV fájl adatainak betöltése dataframe-be
+    df = pd.read_csv(               # a CSV fájl adatainak betöltése DataFrame-be
         src_data,                   # A CSV fájl elérése
         sep=";",                    # Adatok elválasztója (pontosvessző)
         encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson

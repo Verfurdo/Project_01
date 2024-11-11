@@ -14,7 +14,7 @@ def create_plot(x_log, y_log, y_pred_log, mse, r2):
     # Létrehozunk egy új ábrát és tengelyeket, 9x9-es méretben
     fig, ax = plt.subplots(figsize=(9, 9))
     
-    # Az eredeti adatpontok megjelenítése (szétszórt pontokként)
+    # Adatpontok megjelenítése (szétszórt pontokként)
     ax.scatter(x_log, y_log, s=60, alpha=0.7, edgecolors="k", c='green', label="Adatpontok")  # Pontok mérete, színe, átlátszósága, körvonala
     
     # Az adatpontokat összekötő vonal megjelenítése
@@ -25,9 +25,9 @@ def create_plot(x_log, y_log, y_pred_log, mse, r2):
     
     # Reziduálisok megjelenítése: fekete színű, szaggatott vonalak az adatpontok és a regressziós egyenes között
     for i in range(len(x_log)):
-        ax.plot([x_log[i], x_log[i]], [y_log[i], y_pred_log[i]], color='black', linestyle='--', lw=1, label="Reziduálisok" if i == 0 else "")
+        ax.plot([x_log[i], x_log[i]], [y_log[i], y_pred_log[i]], color='black', linestyle='--', lw=1, label="Reziduálisok" if i == 0 else "") # Csak az első vonalhoz ad címkét
     
-    # MSE és R² értékek kiírása a grafikonon
+    # MSE és R² értékek kiírása a grafikon bal felső sarkában, fehér háttérrel
     ax.text(0.05, 0.95, f'MSE: {mse:.4f}\nR²: {r2:.4f}', transform=ax.transAxes, 
             fontsize=12, verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8))
 
