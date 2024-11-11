@@ -18,15 +18,15 @@ def load_and_analyze_data():
         return None
     
     # Adatok beolvasása, ha a fájl létezik
-    df = pd.read_csv(               # Pandas könyvtár read_csv függvényét használja arra, hogy egy CSV fájl adatait betöltse
-        src_data,                   # A CSV fájl elérési útja 
+    df = pd.read_csv(               # a CSV fájl adatainak betöltése dataframe-be
+        src_data,                   # A CSV fájl elérése
         sep=";",                    # Adatok elválasztója (pontosvessző)
         encoding="ISO-8859-1",      # Karakterkódolás, hogy speciális karaktereket is olvasson
         skipinitialspace=True,      # Szóközök eltávolítása az értékek körül
         skiprows=[0])                # Az első sor kihagyása (fejléccel van ellátva)
                
     # Tisztítás és átalakítás: a felesleges szóközök és vesszők cseréje
-    df = df.replace(" ", "", regex=True)  # Megmaradt szóközök eltávolítása
+    df = df.replace(" ", "", regex=True)  # Szóközök eltávolítása
     df = df.replace(',', '.', regex=True)  # Vesszők cseréje pontokra, hogy a számok float típusúak lehessenek
     x = df.iloc[2:, 1].astype(float)  # X tengely adatainak kiválasztása és float típusra alakítása
     y = df.iloc[2:, 7].astype(float)  # Y tengely adatainak kiválasztása és float típusra alakítása
