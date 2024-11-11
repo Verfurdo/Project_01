@@ -26,9 +26,9 @@ def create_plot(x_log, y_log, y_pred_log, mse, r2):
             fontsize=12, verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8))
 
     # Cím és tengelyfeliratok beállítása
-    ax.set_title('Hazai Sörfogyasztás összesen (Logaritmikus transzformációval)')  # Grafikon cím
-    ax.set_xlabel('Termelés (millió liter)')  # X tengely felirata
-    ax.set_ylabel('Fogyasztás (millió liter)')  # Y tengely felirata
+    ax.set_title('Hazai Sörfogyasztás összesen (logaritmikus skálán)')  # Grafikon cím
+    ax.set_xlabel('Termelés (log millió liter)')  # X tengely felirata
+    ax.set_ylabel('Fogyasztás (log millió liter)')  # Y tengely felirata
     
     # Rácsvonalak hozzáadása a jobb átláthatóság érdekében
     ax.grid(True)
