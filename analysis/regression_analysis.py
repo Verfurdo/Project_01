@@ -1,4 +1,4 @@
-# analysis/regression_analysis.py
+# analysis/regression_analysis.py  -  Adatok elemzése modul
 
 # Szükséges könyvtárak importálása
 import os  # Operációs rendszerrel kapcsolatos műveletekhez, (fájlok elérési útjának kezelése)

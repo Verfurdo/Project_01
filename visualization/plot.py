@@ -1,4 +1,4 @@
-# visualization/plot.py
+# visualization/plot.py  -  Grafikus megjelenítés modul
 
 # Szükséges könyvtárak importálása
 import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
