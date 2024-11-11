@@ -1,6 +1,7 @@
-import os
-import subprocess
-import sys
+# Szükséges modulok importálása
+import os         # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
+import subprocess # Külső parancsok futtatása Pythonból, (Streamlit alkalmazás indítása)
+import sys        # Rendszerspecifikus információk és műveletek (Python futtatókörnyezet elérési útjának lekérése)
 
 # A project.py fájl elérési útjának meghatározása
 script_dir = os.path.dirname(os.path.abspath(__file__))  # A jelenlegi fájl könyvtára
