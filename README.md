@@ -51,7 +51,7 @@ Használat
 
     streamlit run project.py vagy futtasd a project.bat fájlt az elindításhoz
  
-    Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk, így ideális dashboardok, jelentések fejlesztésére.
+    Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk.
 
 Fájlok magyarázata
 
