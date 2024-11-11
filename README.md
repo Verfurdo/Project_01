@@ -51,17 +51,19 @@ Használat
     Vagy futtasd a start_project.py fájlt az elindításhoz:
         python start_project.py
  
-    Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk.
+    Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.
+    A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív 
+    adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk.
 
 Fájlok magyarázata
 
     install_modules.py: Függőségek telepítéséhez használt python script.
-    project.py: A Streamlit alkalmazás indítófájlja, amely a streamlit_app.py modult használja a webes megjelenítéshez.
+    start_project.py: A program indításához használt python script.
+    project.py: A Streamlit alkalmazás indítófájlja, amely a streamlit_module.py modult használja a webes megjelenítéshez.
     streamlit_module.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py 
-                         és plot.py modulokat használja az adatelemzéshez és a vizualizációhoz.
-    regression_analysis.py: Az adatok elemzéséhez, tisztításához és a logaritmikus transzformáció 
-                            elvégzéséhez szükséges függvényeket tartalmazza.
-    plot.py: A logaritmikus transzformált adatok grafikus ábrázolásáért felelős.
+                         és plot.py modulokat használja az adatelemzéshez és a grafikus megjelenítéshez.
+    regression_analysis.py: Az adatok tisztításához, elemzéséhez a logaritmikus transzformáció elvégzéséhez szükséges függvényeket tartalmazza.
+    plot.py: Az adatok grafikus ábrázolásáért felelős.
 
 Kimenet
 
