@@ -46,9 +46,10 @@ Adatfájl
 Használat
 
     Streamlit alapú megjelenítés
-    Futtasd a project.py fájlt a Streamlit segítségével:
-
-    streamlit run project.py vagy futtasd a project.bat fájlt az elindításhoz
+    Futtasd a project.py fájlt a Streamlit segítségével: 
+        streamlit run project.py 
+    Vagy futtasd a start_project.py fájlt az elindításhoz:
+        python start_project.py
  
     Ez megnyit egy webes felületet, ahol interaktívan megjelennek az eredmények.A Streamlit egy nyílt forráskódú Python keretrendszer, amely lehetővé teszi hogy interaktív adat alkalmazásokat készítsenek ezzel a Python szkripteket gyorsan és egyszerűen, webalkalmazásokká alakíthatunk.
 
