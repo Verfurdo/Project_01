@@ -2,7 +2,6 @@
 
 # Szükséges könyvtárak importálása
 import os      # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
-import sys        # Rendszerspecifikus információk és műveletek (Python futtatókörnyezet elérési útjának lekérése)
 import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segítségével
 import numpy as np  # Numerikus műveletek és tömbkezelés
 from sklearn.linear_model import LinearRegression  # Lineáris regressziós modell importálása
