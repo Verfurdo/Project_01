@@ -1,10 +1,12 @@
+# analysis/regression_analysis.py
+
 # Szükséges könyvtárak importálása
-import os  # Operációs rendszerrel kapcsolatos műveletekhez, pl. fájlok elérési útjának kezelése
-import pandas as pd  # Adatok beolvasása és manipulálása DataFrame-ek segítségével
+import os  # Operációs rendszerrel kapcsolatos műveletekhez, (fájlok elérési útjának kezelése)
+import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segítségével
 import numpy as np  # Numerikus műveletek és tömbkezelés
 from sklearn.linear_model import LinearRegression  # Lineáris regressziós modell importálása
 from sklearn.metrics import mean_squared_error, r2_score  # Modell értékeléséhez szükséges metrikák
-from scipy import stats  # Statisztikai műveletekhez, pl. kiugró értékek szűrésére
+from scipy import stats  # Statisztikai műveletekhez (kiugró értékek szűrésére)
 
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():

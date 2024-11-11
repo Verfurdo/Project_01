@@ -1,8 +1,8 @@
 # visualization/plot.py
 
 # Szükséges könyvtárak importálása
-import matplotlib.pyplot as plt
-import numpy as np
+import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
+import numpy as np   # Numerikus műveletek és tömbkezelés
 
 # Függvény a logaritmikus adatokat megjelenítő grafikon létrehozására, reziduálisokkal
 def create_plot(x_log, y_log, y_pred_log, mse, r2):

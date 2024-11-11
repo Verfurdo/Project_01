@@ -1,5 +1,5 @@
 # Szükséges modulok importálása
-import streamlit as st
+import streamlit as st  # Webalkalmazás készítéséhez, adatvizualizációhoz
 from analysis import regression_analysis  # Adatok elemzése
 from visualization import plot  # Grafikon megjelenítése
 
