@@ -11,8 +11,9 @@ from scipy import stats  # Statisztikai műveletekhez (kiugró értékek szűré
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():
     
-    # Adatok betöltése egy CSV fájlból
-    src_data = os.path.join("data", "stadat-nep0013-22.1.1.13-hu.csv")  # A CSV fájl elérési útjának meghatározása
+    # Adatok betöltése egy CSV fájlból abszolút elérési uttal
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Jelenlegi fájl könyvtára
+    src_data = os.path.join(script_dir, '..', 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # A CSV fájl elérési útja  
     
     # Fájl létezésének ellenőrzése
     if not os.path.exists(src_data):
