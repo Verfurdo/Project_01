@@ -1,7 +1,8 @@
 # analysis/regression_analysis.py  -  Adatok elemzése modul
 
 # Szükséges könyvtárak importálása
-import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
+import os      # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
+import sys        # Rendszerspecifikus információk és műveletek (Python futtatókörnyezet elérési útjának lekérése)
 import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segítségével
 import numpy as np  # Numerikus műveletek és tömbkezelés
 from sklearn.linear_model import LinearRegression  # Lineáris regressziós modell importálása
@@ -11,8 +12,8 @@ from scipy import stats  # Statisztikai műveletekhez (kiugró értékek szűré
 # Adat betöltésére és elemzésére szolgáló függvény
 def load_and_analyze_data():
     
-    # Adatok betöltése egy CSV fájlból abszolút elérési uttal
-    script_dir = os.path.dirname(os.path.abspath(__file__))  # Jelenlegi fájl könyvtára
+    # Abszolút elérési út meghatározása majd az adatok betöltése egy CSV fájlból
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Megadja az aktuális fájl könyvtárát
     src_data = os.path.join(script_dir, '..', 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # A CSV fájl elérési útja  
     
     # Fájl létezésének ellenőrzése
