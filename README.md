@@ -66,8 +66,8 @@ Fájlok magyarázata
 Kimenet
 
     Metrikák:
-        Mean Squared Error (MSE): A regressziós modell hibáját méri.
-        R-squared (R2): A modell illeszkedésének pontosságát mutatja.
+        Mean Squared Error (MSE): A regressziós modell hibáját méri. A négyzetes hibák átlaga, akkor a legjobb, ha az értéke minél közelebb van a 0-hoz. 
+        R-squared (R2): A modell illeszkedésének pontosságát mutatja 1.0 a tökéletes illeszkedés.
 
     Grafikon:
         Egy logaritmizált skálán ábrázolt diagram jelenik meg, amelyen a termelés és fogyasztás 
