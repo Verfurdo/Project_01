@@ -33,10 +33,9 @@ Telepítés
 
     Könyvtárak telepítése requirements mappában található
     Minden szükséges modult telepíthetsz a következő paranccsal:
-    pip install -r requirements.txt vagy futtasd a !requirements.bat fájlt
-
-    Alternatív megoldásként futtathatod az install_modules.py fájlt, amely automatikusan telepíti a függőségeket:
-    python install_modules.py
+        pip install -r requirements.txt
+    Vagy futtathatod az install_modules.py fájlt, amely automatikusan telepíti a függőségeket:
+        python install_modules.py
 
 
 Adatfájl 
