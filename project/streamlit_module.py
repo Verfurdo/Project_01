@@ -8,7 +8,7 @@ def streamlit_futtatasa():
     # Alkalmazás címének beállítása
     st.title("Fogyasztás és Termelés Elemzése")
     
-    # Adatok betöltése és ellenőrzése függvény meghívása
+    # Adat betöltésére és elemzésére szolgáló függvény meghívása
     result = regression_analysis.adatok_betoltese_elemzese()
     if result is None:
         st.error("A szükséges CSV fájl nem található. Helyezd a fájlt a 'data' mappába, és próbáld újra.")
@@ -17,7 +17,7 @@ def streamlit_futtatasa():
     # Elemzési eredmények megjelenítése
     x_log, y_log, mse, r2 = result
     
-    # Adatok betöltése és elemzése függvény meghívása
+    # Regressziós egyenes illesztése függvény meghívása
     y_pred_log = regression_analysis.regresszios_egyenes_illesztese(x_log, y_log)
     
     # Grafikon létrehozása függvény meghívása
