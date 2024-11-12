@@ -60,10 +60,9 @@ def adatok_betoltese_elemzese():
 
     return x_log, y_log, mse, r2  # Eredmények visszaadása
 
-# Regressziós egyenes illesztésére szolgáló függvény
+#  Lineáris regresszió ismételt illesztése egy külön függvényben a későbbi meghívásra
 def regresszios_egyenes_illesztese(x_log, y_log):
-    # Lineáris regresszió ismételt illesztése, hogy a regressziós egyenest előállítsuk
     model = LinearRegression()
-    x_log_reshaped = x_log.values.reshape(-1, 1)
-    model.fit(x_log_reshaped, y_log)
+    x_log_reshaped = x_log.values.reshape(-1, 1)  # Átalakítás a modell számára
+    model.fit(x_log_reshaped, y_log)  # Modell illesztése
     return model.predict(x_log_reshaped)  # Az egyenes pontjainak visszaadása
