@@ -11,7 +11,7 @@ from scipy import stats  # Statisztikai műveletekhez (kiugró értékek szűré
 # Adat betöltésére és elemzésére szolgáló függvény
 def adatok_betoltese_elemzese():
     
-    # Abszolút elérési út meghatározása majd az adatok betöltése egy CSV fájlból
+    # Abszolút elérési út meghatározása majd az adatok betöltése a CSV fájlból
     script_dir = os.path.dirname(os.path.abspath(__file__))  # Megadja az aktuális fájl könyvtárát
     src_data = os.path.join(script_dir, '..', 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # A CSV fájl elérési útja  
     
