@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szük
 import numpy as np   # Numerikus műveletek és tömbkezelés
 
 # Függvény a logaritmikus adatokat megjelenítő grafikon létrehozására, reziduálisokkal
-def create_plot(x_log, y_log, y_pred_log, mse, r2):
+def grafikon_keszitese(x_log, y_log, y_pred_log, mse, r2):
     # Biztosítjuk, hogy x_log és y_log NumPy tömbökké legyenek konvertálva
     x_log = np.array(x_log)
     y_log = np.array(y_log)

@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score  # Modell értékelés�
 from scipy import stats  # Statisztikai műveletekhez (kiugró értékek szűrésére)
 
 # Adat betöltésére és elemzésére szolgáló függvény
-def load_and_analyze_data():
+def adatok_betoltese_elemzese():
     
     # Abszolút elérési út meghatározása majd az adatok betöltése egy CSV fájlból
     script_dir = os.path.dirname(os.path.abspath(__file__))  # Megadja az aktuális fájl könyvtárát
@@ -61,7 +61,7 @@ def load_and_analyze_data():
     return x_log, y_log, mse, r2  # Eredmények visszaadása
 
 # Regressziós egyenes illesztésére szolgáló függvény
-def get_regression_line(x_log, y_log):
+def regresszios_egyenes_illesztese(x_log, y_log):
     # Lineáris regresszió ismételt illesztése, hogy a regressziós egyenest előállítsuk
     model = LinearRegression()
     x_log_reshaped = x_log.values.reshape(-1, 1)
