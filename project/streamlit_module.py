@@ -1,7 +1,8 @@
 # streamlit_module.py
 
 import numpy as np  # NumPy importálása az elemzéshez, ha szükséges
-from analysis.data_analysis import load_and_prepare_data, save_statistical_analysis  # Pontosított import
+from analysis.data_analysis import load_and_prepare_data
+from analysis.statistical_analysis import save_statistical_analysis
 from visualization.line_plot import create_line_plot
 from visualization.scatter_plot import create_scatter_plot
 
