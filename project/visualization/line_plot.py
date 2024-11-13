@@ -20,4 +20,7 @@ def create_line_plot(df):
     ax.set_ylabel('Mennyiség (millió liter)')
     ax.legend()
 
+    plt.grid(True)  # Rácsvonalak bekapcsolása
+    plt.legend()    # Jelmagyarázat bekapcsolása
+
     return fig
