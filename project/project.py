@@ -2,16 +2,16 @@
 
 # Szükséges modulok importálása
 import streamlit as st  # Streamlit és a modulok importálása a megjelenítéshez
-from streamlit_module import megjelenites  # Megjelenites modul importálása
+from streamlit_module import foprogramnak_vissza  
 
 def foprogram():
     # Az alkalmazás címének beállítása
     st.title("Fogyasztás és Termelés Elemzése")
 
     # Lekérések a streamlit_module-ból
-    vonaldiagram, pontdiagram = megjelenites()
+    vonaldiagram, pontdiagram = foprogramnak_vissza()
     
-    # Két grafikon létrehozása a vizualizációkhoz
+    # Két grafikon létrehozása 
     grafikon1, grafikon2 = st.columns(2)
     
     # Vonaldiagram megjelenítése az első grafikonon

@@ -23,8 +23,8 @@ def diagramok_letrehozasa(df):
     pontdiagram = pontdiagram_letrehozasa(df)  # Pontdiagram létrehozása
     return vonaldiagram, pontdiagram  # Diagramok visszaadása
 
-def megjelenites():
-    """Kezdeményezi az elemzést és a vizualizációkat, és visszaadja azokat megjelenítéshez."""
+def foprogramnak_vissza():
+    """Elvégzi az elemzést és a vizualizációkat, és visszaadja azokat főprogramnak."""
     df = adatok_elemzese()  # Adatok elemzése
     vonaldiagram, pontdiagram = diagramok_letrehozasa(df)  # Diagramok létrehozása
     return vonaldiagram, pontdiagram  # Diagramok visszaadása a fő alkalmazáshoz
