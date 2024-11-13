@@ -3,7 +3,7 @@
 # Szükséges modulok importálása
 import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
 
-def create_line_plot(df):
+def vonaldiagram_letrehozasa(df):
     # Grafikon alapbeállítása
     fig, ax = plt.subplots(figsize=(6, 4))  # 6x4 méretű grafikon
     

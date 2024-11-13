@@ -5,7 +5,7 @@ import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segít
 import numpy as np  # Numerikus műveletek és tömbkezelés
 import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
 
-def save_statistical_analysis(df, output_dir='data'):
+def statisztikai_elemzes_mentese(df, output_dir='data'):
     # Ellenőrizzük, hogy a 'data' mappa létezik-e ha nem, létrehozzuk
     full_output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', output_dir)
     os.makedirs(full_output_dir, exist_ok=True)

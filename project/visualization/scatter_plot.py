@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression  # Lineáris regressziós mode
 from sklearn.metrics import r2_score # Modell értékeléséhez szükséges metrika
 import numpy as np  # Numerikus műveletek és tömbkezelés
 
-def create_scatter_plot(df):
+def pontdiagram_letrehozasa(df):
     # Grafikon alapbeállítása
     fig, ax = plt.subplots(figsize=(6, 4))  # 6x4 méretű grafikon
     

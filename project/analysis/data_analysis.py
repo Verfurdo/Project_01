@@ -4,7 +4,7 @@
 import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
 import pandas as pd  # Adatok beolvasása és átalakítása DataFrame-ek segítségével
 
-def load_and_prepare_data():
+def adatok_betoltese_elokeszitese():
     # Adatok elérési útjának meghatározása
     script_dir = os.path.dirname(os.path.abspath(__file__))  # Megadja az aktuális fájl könyvtárát
     data_path = os.path.join(script_dir, '..', 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # A CSV fájl elérési útja
