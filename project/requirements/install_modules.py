@@ -9,9 +9,8 @@ def install(module):
     print(f"A szükséges modul(ok) {module} telepítve")
 
 # Az alkalmazás futtatásához szükséges modulok telepítése
-install('scikit-learn')  # Gépitanulási könyvtár
+install('scikit-learn')  # Gépitanulási könyvtár (lineáris regresszió)
 install('numpy')         # Numerikus számítási könyvtár
 install('pandas')        # Adatkezelési és -elemzési könyvtár
 install('matplotlib')    # Grafikonok és ábrák készítéséhez
 install('streamlit')     # Webalkalmazás készítéséhez, adatvizualizációhoz
-install('scipy')         # Tudományos számítási könyvtár
