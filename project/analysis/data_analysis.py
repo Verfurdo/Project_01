@@ -23,6 +23,6 @@ def adatok_betoltese_elokeszitese():
     df = df.replace(',', '.', regex=True)  # Vesszők cseréje pontokra, hogy a számok float típusúak lehessenek
     df['Termelés'] = pd.to_numeric(df['Termelés'], errors='coerce')  # 'Termelés' oszlop átalakítása numerikus típussá, hibás értékeket NaN-né alakítva
     df['Fogyasztás'] = pd.to_numeric(df['Fogyasztás'], errors='coerce')  # 'Fogyasztás' oszlop átalakítása numerikus típussá, hibás értékeket NaN-né alakítva
-
+    df['Év'] = pd.to_numeric(df['Év'], errors='coerce')  # 'Év' oszlop átalakítása numerikus típussá, hibás értékeket NaN-né alakítva
 
     return df  # Előkészített adatok visszaadása
