@@ -6,7 +6,7 @@ from streamlit_module import foprogramnak_vissza
 
 def foprogram():
     # Az alkalmazás címének beállítása
-    st.title("Fogyasztás és Termelés Elemzése")
+    st.title("Termelés és Fogyasztás Elemzése")
 
     # Lekérések a streamlit_module-ból
     vonaldiagram, pontdiagram = foprogramnak_vissza()
