@@ -7,7 +7,7 @@ from visualization.line_plot import vonaldiagram_letrehozasa  # Vonaldiagram lé
 from visualization.scatter_plot import pontdiagram_letrehozasa  # Pontdiagram létrehozása
 
 def adatok_elemzese():
-    """Betölti és elemzi az adatokat, és statisztikai eredményt ment"""
+    """Betölti és elemzi az adatokat, és statisztikai eredményt elmenti"""
     try:
         df = adatok_betoltese_elokeszitese()  # Adatok betöltése
     except FileNotFoundError:
