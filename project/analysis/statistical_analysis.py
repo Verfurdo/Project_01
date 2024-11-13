@@ -6,7 +6,7 @@ import numpy as np  # Numerikus műveletek és tömbkezelés
 import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
 
 def statisztikai_elemzes_mentese(df, output_dir='data'):
-    # Ellenőrizzük, hogy a 'data' mappa létezik-e ha nem, létrehozzuk
+    # Ellenőrizzük, hogy a 'data' mappa létezik-e
     full_output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', output_dir)
     os.makedirs(full_output_dir, exist_ok=True)
 
