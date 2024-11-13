@@ -1,4 +1,4 @@
-# data_analysis.py - Adatbetöltés és előkészítés a regressziós és statisztikai elemzéshez
+# data_analysis.py - Adatbetöltés és előkészítés
 
 # Szükséges modulok importálása
 import os  # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
