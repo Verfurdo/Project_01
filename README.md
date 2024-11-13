@@ -1,6 +1,5 @@
 # Hazai Sörfogyasztás és Termelés Adatelemző Alkalmazás
 
-
 Ez a projekt a hazai sörfogyasztás elemzését végzi a `stadat-nep0013-22.1.1.13-hu.csv` adatfájl alapján. A cél a termelés és a fogyasztás közötti kapcsolat elemzése, grafikus megjelenítése és statisztikai elemzés elvégzése. Az elemzés eredményei vizuálisan, interaktív Streamlit alkalmazásban jelennek meg, illetve a statisztikai adatok CSV fájlba mentésével statisztikai adatokhoz juthatunk.
 
 Tartalom
