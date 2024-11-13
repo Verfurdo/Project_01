@@ -1,12 +1,7 @@
-# Lineáris Regresszió
+# Hazai Sörfogyasztás és Termelés Adatelemző Alkalmazás
 
-Ez a projekt a hazai sörfogyasztás és termelés adatainak lineáris regressziós elemzését végzi logaritmikus transzformáció alkalmazásával. A stadat-nep0013-22.1.1.13-hu.csv adatfájl alapján elemzi a kapcsolatot a termelés és a fogyasztás között, és grafikusan megjeleníti az eredményeket beleértve a lineáris regresszió egyenesét is.
 
-A statisztika eszköztárában a lineáris regresszió egy olyan paraméteres regressziós modell, 
-mely feltételezi a magyarázó- (X) és a magyarázott változó közti lineáris kapcsolatot. 
-Ez azt jelenti, hogy lineáris regresszió becslése során a mintavételi adatok 
-pontjaira egy egyenest illeszt rá.
-
+Ez a projekt a hazai sörfogyasztás elemzését végzi a `stadat-nep0013-22.1.1.13-hu.csv` adatfájl alapján. A cél a termelés és a fogyasztás közötti kapcsolat elemzése, grafikus megjelenítése és statisztikai elemzés elvégzése. Az elemzés eredményei vizuálisan, interaktív Streamlit alkalmazásban jelennek meg, illetve a statisztikai adatok CSV fájlba mentésével statisztikai adatokhoz juthatunk.
 
 Tartalom
 
@@ -26,7 +21,6 @@ Előfeltételek
     pandas
     matplotlib
     scikit-learn
-    scipy
     streamlit 
 
 Telepítés
@@ -57,23 +51,28 @@ Használat
 
 Fájlok magyarázata
 
-    install_modules.py: Függőségek telepítéséhez használt python script.
-    start_project.py: A program indításához használt python script.
-    project.py: A Streamlit alkalmazás indítófájlja, amely a streamlit_module.py modult használja a webes megjelenítéshez.
-    streamlit_module.py: A Streamlit alkalmazás alapvető funkcióit tartalmazza, és a regression_analysis.py 
-                         és plot.py modulokat használja az adatelemzéshez és a grafikus megjelenítéshez.
-    regression_analysis.py: Az adatok tisztításához, elemzéséhez a logaritmikus transzformáció elvégzéséhez szükséges függvényeket tartalmazza.
-    plot.py: Az adatok grafikus ábrázolásáért felelős.
+    install_modules.py: A projekt függőségeinek telepítésére szolgáló szkript.
+    start_project.py: A projekt indítását végző segédfájl.
+    project.py: A fő Streamlit alkalmazásindító fájl, amely a streamlit_module.py modult használja a megjelenítéshez.
+    streamlit_module.py: A Streamlit alkalmazás alapvető funkcióit, adatbetöltést, elemzést és vizualizációkat tartalmazó modul.
+    data_analysis.py: Az adatok betöltésére és előkészítésére szolgáló modul.
+    statistical_analysis.py: A statisztikai mutatók kiszámítását és a mentést végző modul.
+    line_plot.py: A termelési és fogyasztási adatok vonaldiagramjának létrehozását végző modul.
+    scatter_plot.py: A termelés és fogyasztás közötti kapcsolat pontdiagramjának és a regressziós elemzésnek a megjelenítéséért felelős modul.
 
 Kimenet
 
+    Grafikonok:
+        Egy vonal és pont diagram jelenik meg, amelyen a termelés és fogyasztás 
+        kapcsolatát látjuk, beleértve a lineáris regressziós egyenest is.
+        
     Metrikák:
-        Mean Squared Error (MSE): A regressziós modell hibáját méri. A négyzetes hibák átlaga, akkor a legjobb, ha az értéke minél közelebb van a 0-hoz. 
         R-squared (R2): A modell illeszkedésének pontosságát mutatja 1.0 a tökéletes illeszkedés.
 
-    Grafikon:
-        Egy logaritmizált skálán ábrázolt diagram jelenik meg, amelyen a termelés és fogyasztás 
-        kapcsolatát látjuk, beleértve a lineáris regressziós egyenest is.
+    Statisztika mentése:
+        A program a data mappába menti a statisztikai fájlt el.
+
+    
 
 Forrás
 
