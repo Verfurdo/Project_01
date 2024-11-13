@@ -7,15 +7,15 @@ from visualization.line_plot import vonaldiagram_letrehozasa  # Vonaldiagram lé
 from visualization.scatter_plot import pontdiagram_letrehozasa  # Pontdiagram létrehozása
 
 def adatok_elemzese():
-    """Betölti és elemzi az adatokat, és statisztikai eredményt elmenti"""
+    """Betölti és elemzi az adatokat, és statisztikai számításokat elmenti"""
     try:
         df = adatok_betoltese_elokeszitese()  # Adatok betöltése
     except FileNotFoundError:
         st.error("A szükséges CSV fájl nem található. Helyezd a fájlt a 'data' mappába, és próbáld újra.")
         st.stop()  # Streamlit futásának megszakítása, ha a fájl hiányzik
     
-    statisztikai_elemzes_mentese(df)  # Statisztikai elemzés mentése
-    return df  # Előkészített adatkeret visszaadása
+    statisztikai_elemzes_mentese(df)  # Statisztikai számítások mentése
+    return df  
 
 def diagramok_letrehozasa(df):
     """Létrehozza a vonal- és pontdiagramot az előkészített adatokból."""
