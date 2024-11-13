@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score # Modell értékeléséhez szükséges metr
 import numpy as np  # Numerikus műveletek és tömbkezelés
 
 def pontdiagram_letrehozasa(df):
-    # Grafikon alapbeállítása
+    # Grafikon létrehozása
     fig, ax = plt.subplots(figsize=(6, 4))  # 6x4 méretű grafikon
     
     # Szóráspontok kirajzolása az 'Termelés' és 'Fogyasztás' adatok alapján

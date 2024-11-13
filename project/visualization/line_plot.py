@@ -4,7 +4,7 @@
 import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
 
 def vonaldiagram_letrehozasa(df):
-    # Grafikon alapbeállítása
+    # Grafikon létrehozása
     fig, ax = plt.subplots(figsize=(6, 4))  # 6x4 méretű grafikon
     
     # Vonaldiagram kirajzolása 'Termelés' és 'Fogyasztás' adatok alapján
