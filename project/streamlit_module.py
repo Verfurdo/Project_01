@@ -1,25 +1,18 @@
-# Szükséges modulok importálása
-import streamlit as st  # Webalkalmazás készítéséhez, adatvizualizációhoz
-from analysis import regression_analysis  # Adatok elemzése
-from visualization import plot  # Grafikon megjelenítése
+# streamlit_module.py
 
-# Streamlit alkalmazás futtatásáért felelős függvény
-def streamlit_futtatasa():
-    # Alkalmazás címének beállítása
-    st.title("Fogyasztás és Termelés Elemzése")
-    
-    # Adat betöltésére és elemzésére szolgáló függvény meghívása
-    result = regression_analysis.adatok_betoltese_elemzese()
-    if result is None:
-        st.error("A szükséges CSV fájl nem található. Helyezd a fájlt a 'data' mappába, és próbáld újra.")
-        return  # Megszakítja a végrehajtást, ha a fájl nem található
-    
-    # Elemzési eredmények megjelenítése
-    x_log, y_log, mse, r2 = result
-    
-    # Regressziós egyenes illesztése függvény meghívása
-    y_pred_log = regression_analysis.regresszios_egyenes_illesztese(x_log, y_log)
-    
-    # Grafikon létrehozása függvény meghívása
-    fig = plot.grafikon_keszitese(x_log, y_log, y_pred_log, mse, r2)
-    st.pyplot(fig)
+import numpy as np  # NumPy importálása az elemzéshez, ha szükséges
+from analysis.data_analysis import load_and_prepare_data, save_statistical_analysis  # Pontosított import
+from visualization.line_plot import create_line_plot
+from visualization.scatter_plot import create_scatter_plot
+
+def get_visualizations():
+    df = load_and_prepare_data()
+
+    # Statisztikai elemzés és mentés CSV-be
+    save_statistical_analysis(df)
+
+    # Vonaldiagram és pontdiagram létrehozása a nyers adatokkal
+    line_plot = create_line_plot(df)
+    scatter_plot = create_scatter_plot(df)  # A pontdiagram a nyers adatokkal dolgozik
+
+    return line_plot, scatter_plot
