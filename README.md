@@ -69,6 +69,9 @@ Kimenet
     Metrikák:
         R-squared (R2): A modell illeszkedésének pontosságát mutatja 1.0 a tökéletes illeszkedés.
 
+    Reziduálisok
+    A reziduális jelentése a lineáris regresszióban a különbség a megfigyelt értékek és a regressziós egyenes által előrejelzett értékek között. Ezek a reziduálok mutatják meg, hogy mennyire pontosan közelíti meg a modell a valós adatokat. A reziduálisok elemzése segít a modell illeszkedésének értékelésében.
+
     Statisztika mentése:
         A program a data mappába menti a statisztikai fájlt el.
 
