@@ -1,8 +1,8 @@
 # streamlit_module.py - Vizualizációk és elemzések modul Streamlit alkalmazáshoz
 
 import streamlit as st  # Streamlit komponensek megjelenítéséhez
-from analysis.data_analysis import adatok_betoltese_elokeszitese  # Adatok betöltése és előkészítése
-from analysis.statistical_analysis import statisztikai_elemzes_mentese  # Statisztikai elemzés mentése
+from analysis.data_analysis import adatok_betoltese_elokeszitese  # Adatok betöltése és előkészítése függvény meghívása
+from analysis.data_analysis import statisztikai_elemzes_mentese  # Statisztikai elemzés mentése függvény meghívása
 from visualization.line_plot import vonaldiagram_letrehozasa  # Vonaldiagram létrehozása
 from visualization.scatter_plot import pontdiagram_letrehozasa  # Pontdiagram létrehozása
 

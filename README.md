@@ -21,6 +21,7 @@ Előfeltételek
     matplotlib
     scikit-learn
     streamlit 
+    scipy
 
 Telepítés
 
@@ -54,8 +55,7 @@ Fájlok magyarázata
     start_project.py: A projekt indítását végző segédfájl.
     project.py: A fő Streamlit alkalmazásindító fájl, amely a streamlit_module.py modult használja a megjelenítéshez.
     streamlit_module.py: A Streamlit alkalmazás alapvető funkcióit, adatbetöltést, elemzést és vizualizációkat tartalmazó modul.
-    data_analysis.py: Az adatok betöltésére és előkészítésére szolgáló modul.
-    statistical_analysis.py: A statisztikai mutatók kiszámítását és a mentést végző modul.
+    data_analysis.py: Az adatok betöltésére és előkészítésére szolgáló modul. / A statisztikai mutatók kiszámítását és a mentést végző modul.
     line_plot.py: A termelési és fogyasztási adatok vonaldiagramjának létrehozását végző modul.
     scatter_plot.py: A termelés és fogyasztás közötti kapcsolat pontdiagramjának és a regressziós elemzésnek a megjelenítéséért felelős modul.
 

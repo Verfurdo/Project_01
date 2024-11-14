@@ -17,3 +17,11 @@ Fogyasztás,Szórás,143.6717094586315
 Fogyasztás,Variancia,20641.56009876543
 Fogyasztás,Minimum,613.3
 Fogyasztás,Maximum,1091.8
+Termelés-Fogyasztás,Korrelációs együttható,0.9238497513064977
+Termelés-Fogyasztás,p-érték,1.5172291455166069e-19
+Regresszió,Meredekség (slope),1.0318387413850774
+Regresszió,Y tengelymetszet (intercept),50.81497328463092
+Regresszió,R² érték,0.8534983629890773
+Regresszió,MAE (Mean Absolute Error),48.70416430627024
+Regresszió,MSE (Mean Squared Error),3024.0223449284795
+Előrejelzés,Fogyasztás 2025-re (termelés=535),602.8486999256473
