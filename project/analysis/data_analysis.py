@@ -99,7 +99,7 @@ def statisztikai_elemzes_mentese(df):
         
             # Üzenet a diagram készítésről
             message2 = st.empty()
-            message2.info("Vonal- és Pont-diagram készítése a beolvasott adatok alapján....")
+            message2.info("Vonal- és Pontdiagram készítése a beolvasott adatok alapján....")
         
             time.sleep(7)  # 7 másodperc várakozás
         
