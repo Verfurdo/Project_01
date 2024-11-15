@@ -1,19 +1,13 @@
-# streamlit_module.py - Vizualizációk és elemzések modul Streamlit alkalmazáshoz
+# streamlit_module.py - Elemzések és diagramok modul a Streamlit alkalmazáshoz
 
-import streamlit as st  # Streamlit komponensek megjelenítéséhez
 from analysis.data_analysis import adatok_betoltese_elokeszitese  # Adatok betöltése és előkészítése függvény meghívása
 from analysis.data_analysis import statisztikai_elemzes_mentese  # Statisztikai elemzés mentése függvény meghívása
 from visualization.line_plot import vonaldiagram_letrehozasa  # Vonaldiagram létrehozása függvény meghívása
 from visualization.scatter_plot import pontdiagram_letrehozasa  # Pontdiagram létrehozása függvény meghívása
 
 def adatok_elemzese():
-    """Betölti és elemzi az adatokat, és statisztikai számításokat elmenti"""
-    try:
-        df = adatok_betoltese_elokeszitese()  # Adatok betöltése
-    except FileNotFoundError:
-        st.error("A szükséges CSV fájl nem található. Helyezd a fájlt a 'data' mappába, és próbáld újra.")
-        st.stop()  # Streamlit futásának megszakítása, ha a fájl hiányzik
-    
+    """Betölti és elemzi az adatokat / statisztikai számításokat mentése"""   
+    df = adatok_betoltese_elokeszitese()  # Adatok betöltése
     statisztikai_elemzes_mentese(df)  # Statisztikai számítások mentése
     return df  
 

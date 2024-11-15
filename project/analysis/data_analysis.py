@@ -6,6 +6,8 @@ from sklearn.linear_model import LinearRegression  # Lineáris regressziós mode
 from sklearn.metrics import mean_squared_error, mean_absolute_error  # Hibatípusok kiszámításához
 import numpy as np  # Numerikus számítások és tömbök kezelése
 import os  # Operációs rendszerrel kapcsolatos műveletekhez, (elérési út kezelése)
+import streamlit as st
+import time
 
 # Adatok betöltése és előkészítése
 def adatok_betoltese_elokeszitese():
@@ -13,9 +15,10 @@ def adatok_betoltese_elokeszitese():
     script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  
     data_path = os.path.join(script_dir, 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # Adatfájl elérési útja
 
-    # Fájl létezésének ellenőrzése
+    # Fájl létezésének ellenőrzése Streamlit figyelmeztetéssel
     if not os.path.exists(data_path):
-        raise FileNotFoundError(f"A fájl nem található: {data_path}")
+        st.error(f"Az elemzéshez szükséges CSV fájl nem található 'stadat-nep0013-22.1.1.13-hu.csv' Helyezd a fájlt a 'data' mappába, és próbáld újra.")
+        st.stop()  # A Streamlit futásának megszakítása, ha a fájl hiányzik
 
     # CSV fájl betöltése DataFrame-be, elválasztó karakter és karakterkódolás megadása
     df = pd.read_csv(data_path, sep=";", encoding="ISO-8859-1")  
@@ -29,7 +32,7 @@ def adatok_betoltese_elokeszitese():
 
     return df  # Előkészített DataFrame visszaadása
 
-# Statisztikai elemzések számítása és mentése a data mappába
+# Statisztikai elemzések számítása és mentése a 'data' mappába
 def statisztikai_elemzes_mentese(df):
     # Eredmények mentésére szolgáló elérési út meghatározása
     script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -84,5 +87,30 @@ def statisztikai_elemzes_mentese(df):
 
     # Statisztikai eredmények mentése CSV fájlba
     stats_df = pd.DataFrame(rows)  # Eredmények DataFrame-be konvertálása
-    stats_df.to_csv(output_path, index=False, encoding='utf-8-sig')  # DataFrame mentése CSV-be
-    print(f"Statisztikai elemzés mentve a következő fájlba: {output_path}")  # Mentés visszaigazolása
+    
+    # Üzenetek és mentési próbálkozás / hiba esetén Streamlit figyelmeztetés
+    while True:
+        try:
+            stats_df.to_csv(output_path, index=False, encoding='utf-8-sig')
+        
+            # Üzenet a fájl mentéséről
+            message = st.empty()  
+            message.success(f"Statisztikai elemzések számítása mentve a következő fájlba 'data' mappa 'statistical_analysis.csv'")
+        
+            # Üzenet a diagram készítésről
+            message2 = st.empty()
+            message2.info("Vonal- és Pont-diagram (Plot) készítése a beolvasott adatok alapján....")
+        
+            time.sleep(7)  # 7 másodperc várakozás
+        
+            # Üzenetek eltávolítása
+            message.empty()
+            message2.empty()
+        
+            break
+        
+        except PermissionError:
+            st.error(f"HIBA: Nem lehet menteni a fájlt, mert az meg van nyitva: {output_path}")
+            st.info("Kérlek, zárd be a fájlt, és próbáld újra a frissítéssel.")
+            st.stop()  # A Streamlit futásának megállítása
+
