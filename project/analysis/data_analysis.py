@@ -6,8 +6,8 @@ from sklearn.linear_model import LinearRegression  # Lineáris regressziós mode
 from sklearn.metrics import mean_squared_error, mean_absolute_error  # Hibatípusok kiszámításához
 import numpy as np  # Numerikus számítások és tömbök kezelése
 import os  # Operációs rendszerrel kapcsolatos műveletekhez, (elérési út kezelése)
-import streamlit as st
-import time
+import streamlit as st  # Streamlit modulok importálása
+import time  # Az idő kezelésére szolgáló modul importálása (késleltetés)
 
 # Adatok betöltése és előkészítése
 def adatok_betoltese_elokeszitese():
