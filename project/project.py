@@ -26,12 +26,9 @@ def foprogram():
     with grafikon2:
         st.subheader("Pontdiagram")
         st.pyplot(pontdiagram)
-        
-    # Excel fájl betöltése és megjelenítése
-    # st.write("### Excel Fájl Betöltése és Megjelenítése")
-    
-    # Dinamikus elérési út meghatározása
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Excel fájl betöltése és megjelenítése   
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Dinamikus elérési út meghatározása
     xls_path = os.path.join(script_dir, 'data', 'statistical_analysis.xls')
 
     # Ellenőrzés futtatás előtt
@@ -50,23 +47,7 @@ def foprogram():
         # Statisztikai adatok táblázatos megjelenítése
         st.write("### Statisztikai Adatok")
         st.dataframe(df, use_container_width=True)
-        
-        # # Egy további grafikon készítése az Excel adatokból
-        # st.write("### Átlagok Grafikonja")
-        # if 'Metrika' in df.columns:
-        #     df_avg = df[df['Metrika'] == 'Átlag']  # Csak az 'Átlag' metrikát használjuk
-        #     st.write("Átlag adatok:", df_avg)
-
-        #     fig, ax = plt.subplots(figsize=(10, 6))
-        #     ax.bar(df_avg['Oszlop'], df_avg['Érték'], color='blue')
-        #     ax.set_title('Átlagok oszloponként')
-        #     ax.set_ylabel('Érték')
-        #     ax.set_xlabel('Oszlop')
-        #     st.pyplot(fig)
-        # else:
-        #     st.error("A 'Metrika' oszlop nem található az Excel fájlban.")
-        #     st.stop()
-    
+                   
     except Exception as e:
         st.error(f"Hiba történt az Excel fájl feldolgozása során: {str(e)}")
         st.stop()

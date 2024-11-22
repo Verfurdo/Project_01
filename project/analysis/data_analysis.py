@@ -8,8 +8,8 @@ import numpy as np  # Numerikus számítások és tömbök kezelése
 import os  # Operációs rendszerrel kapcsolatos műveletekhez, (elérési út kezelése)
 import streamlit as st  # Streamlit modulok importálása
 import time  # Az idő kezelésére szolgáló modul importálása (késleltetés)
-from openpyxl import Workbook
-from openpyxl.styles import Alignment, Border, Side
+from openpyxl import Workbook  # Excel fájlok létrehozására és betöltésére
+from openpyxl.styles import Alignment, Border, Side  # Stílusok az Excel cellák igazításához és szegélyezéséhez
 
 # Adatok betöltése és előkészítése
 def adatok_betoltese_elokeszitese():
