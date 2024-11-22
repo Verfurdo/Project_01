@@ -15,3 +15,4 @@ install('pandas')        # Adatkezelési és -elemzési könyvtár
 install('matplotlib')    # Grafikonok és ábrák készítéséhez
 install('streamlit')     # Webalkalmazás készítéséhez, adatvizualizációhoz
 install('scipy')         # Tudományos számítási könyvtár
+install('openpyxl')      # Excel fájlok létrehozására és betöltésére könyvtár

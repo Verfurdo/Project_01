@@ -8,6 +8,8 @@ import numpy as np  # Numerikus számítások és tömbök kezelése
 import os  # Operációs rendszerrel kapcsolatos műveletekhez, (elérési út kezelése)
 import streamlit as st  # Streamlit modulok importálása
 import time  # Az idő kezelésére szolgáló modul importálása (késleltetés)
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Border, Side
 
 # Adatok betöltése és előkészítése
 def adatok_betoltese_elokeszitese():
@@ -36,7 +38,7 @@ def adatok_betoltese_elokeszitese():
 def statisztikai_elemzes_mentese(df):
     # Eredmények mentésére szolgáló elérési út meghatározása
     script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    output_path = os.path.join(script_dir, 'data', 'statistical_analysis.csv') # Mentési fájl helye
+    output_path = os.path.join(script_dir, 'data', 'statistical_analysis.xls') # Mentési fájl helye
 
     rows = []  # Lista az összes statisztikai adat tárolására
 
@@ -85,32 +87,54 @@ def statisztikai_elemzes_mentese(df):
     future_consumption_pred = model.predict(future_production)  # Jövőbeli fogyasztás előrejelzése
     rows.append({'Oszlop': 'Előrejelzés', 'Metrika': 'Fogyasztás 2025-re (termelés=565)', 'Érték': future_consumption_pred[0]})
 
-    # Statisztikai eredmények mentése CSV fájlba
-    stats_df = pd.DataFrame(rows)  # Eredmények DataFrame-be konvertálása
-    
-    # Üzenetek és mentési próbálkozás / hiba esetén Streamlit figyelmeztetés
+    # Excel fájl mentése
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Statisztikai Elemzések"
+    stats_df = pd.DataFrame(rows)
+
+    # Adatok írása az Excel fájlba
+    for row in stats_df.itertuples(index=False, name=None):
+        ws.append(row)
+
+    # Formázás hozzáadása
+    for col in ws.columns:
+        max_length = max(len(str(cell.value)) for cell in col if cell.value is not None)
+        col_letter = col[0].column_letter
+        ws.column_dimensions[col_letter].width = max_length + 2
+
+    thin_border = Border(
+        left=Side(style='thin'), right=Side(style='thin'),
+        top=Side(style='thin'), bottom=Side(style='thin')
+    )
+
+    for row in ws.iter_rows(min_row=1, max_row=ws.max_row, min_col=1, max_col=ws.max_column):
+        for cell in row:
+            cell.alignment = Alignment(horizontal="center", vertical="center")
+            cell.border = thin_border
+
+    # Mentési próbálkozás és Streamlit üzenetek
     while True:
         try:
-            stats_df.to_csv(output_path, index=False, encoding='utf-8-sig')
-        
+            wb.save(output_path)
+            
             # Üzenet a fájl mentéséről
             message = st.empty()  
-            message.success(f"Statisztikai elemzések számítása mentve a következő fájlba 'data' mappa 'statistical_analysis.csv'")
-        
-            # Üzenet a diagram készítésről
+            message.success(f"Statisztikai elemzések számítása mentve a következő fájlba 'data' mappa 'statistical_analysis.xls'")
+            
+            # Üzenet a diagram készítéséről
             message2 = st.empty()
-            message2.info("Vonal- és Pontdiagram készítése a beolvasott adatok alapján....")
-        
+            message2.info("Vonal- Pontdiagram és statisztikai táblázat készítése a beolvasott adatok alapján...")
+            
             time.sleep(7)  # 7 másodperc várakozás
-        
+            
             # Üzenetek eltávolítása
             message.empty()
             message2.empty()
-        
+            
             break
-        
+
         except PermissionError:
             st.error(f"HIBA: Nem lehet menteni a fájlt, mert az meg van nyitva: {output_path}")
             st.info("Kérlek, zárd be a fájlt, és próbáld újra a frissítéssel.")
-            st.stop()  # A Streamlit futásának megállítása
-
+            st.stop()

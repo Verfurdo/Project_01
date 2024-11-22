@@ -22,6 +22,7 @@ Előfeltételek
     scikit-learn
     streamlit 
     scipy
+    openpyxl
 
 Telepítés
 
@@ -69,10 +70,11 @@ Kimenet
         R-squared (R2): A modell illeszkedésének pontosságát mutatja 1.0 a tökéletes illeszkedés.
 
     Reziduálisok
-    A reziduális jelentése a lineáris regresszióban a különbség a megfigyelt értékek és a regressziós egyenes által előrejelzett értékek között. Ezek a reziduálok mutatják meg, hogy mennyire pontosan közelíti meg a modell a valós adatokat. A reziduálisok elemzése segít a modell illeszkedésének értékelésében.
+        A reziduális jelentése a lineáris regresszióban a különbség a megfigyelt értékek és a regressziós egyenes által előrejelzett értékek között. Ezek a reziduálok mutatják meg, hogy mennyire pontosan közelíti meg a modell a valós adatokat. A reziduálisok elemzése segít a modell illeszkedésének értékelésében.
 
     Statisztika mentése:
         A program a data mappába menti a statisztikai mutatók számítását a statistical_analysis.csv fáljba.
+        Statisztikai adatok a Sreamlit felületén megjelenítve
 
     
 
