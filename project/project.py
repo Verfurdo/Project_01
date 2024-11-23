@@ -2,9 +2,9 @@
 
 # Szükséges modulok importálása
 import streamlit as st  # Streamlit és a modulok importálása a megjelenítéshez
-import pandas as pd
-import os
-import matplotlib.pyplot as plt
+import pandas as pd  # Adatkezeléshez, DataFrame-ek létrehozásához
+import os  # Operációs rendszerrel kapcsolatos műveletekhez, (elérési út kezelése)
+import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
 from streamlit_module import foprogramnak_vissza  
 
 def foprogram():
