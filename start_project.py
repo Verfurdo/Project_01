@@ -3,7 +3,7 @@ import os         # Operációs rendszerrel kapcsolatos műveletekhez (fájlok e
 import subprocess # Külső parancsok futtatása Pythonból, (Streamlit alkalmazás indítása)
 import sys        # Rendszerspecifikus információk és műveletek (Python futtatókörnyezet elérési útjának lekérése)
 
-# A project.py fájl abszolút elérési útjának meghatározása
+# A fájl dinamikus elérési útjának meghatározása
 script_dir = os.path.dirname(os.path.abspath(__file__))  # Megadja az aktuális fájl könyvtárát
 project_path = os.path.join(script_dir, 'project', 'project.py')  # Az elérési útvonalat a "script_dir" alapján határozza meg függetlenül attól honnan indítod a programot
 
