@@ -1,4 +1,4 @@
-# line_plot.py - Vonaldiagram létrehozása a megadott adatok alapján
+# line_plot.py - Vonaldiagram létrehozása 
 
 # Szükséges modulok importálása
 import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
