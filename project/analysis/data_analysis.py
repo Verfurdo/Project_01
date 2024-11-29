@@ -13,13 +13,13 @@ from openpyxl.styles import Alignment, Border, Side  # Stílusok az Excel cellá
 
 # Adatok betöltése és előkészítése
 def adatok_betoltese_elokeszitese():
-    # Az analysis.py fájl könyvtára alapján az adatfájl csv meghatározása
+    # A data_analysis.py fájl könyvtára alapján az adatfájl csv meghatározása (dinamikus - abszolut)
     script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  
     data_path = os.path.join(script_dir, 'data', 'stadat-nep0013-22.1.1.13-hu.csv')  # Adatfájl elérési útja
 
     # Fájl létezésének ellenőrzése Streamlit figyelmeztetéssel
     if not os.path.exists(data_path):
-        st.error(f"Az elemzéshez szükséges CSV fájl nem található 'stadat-nep0013-22.1.1.13-hu.csv' Helyezd a fájlt a 'data' mappába, és próbáld újra.")
+        st.error(f"Az elemzéshez szükséges CSV fájl nem található 'stadat-nep0013-22.1.1.13-hu.csv' Helyezd a fájlt a 'data' mappába, és futtasd újra a programot.")
         st.stop()  # A Streamlit futásának megszakítása, ha a fájl hiányzik
 
     # CSV fájl betöltése DataFrame-be, elválasztó karakter és karakterkódolás megadása
@@ -36,7 +36,7 @@ def adatok_betoltese_elokeszitese():
 
 # Statisztikai elemzések számítása és mentése a 'data' mappába
 def statisztikai_elemzes_mentese(df):
-    # Eredmények mentésére szolgáló elérési út meghatározása
+    # Eredmények mentésére szolgáló elérési út dinamikus meghatározása
     script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     output_path = os.path.join(script_dir, 'data', 'statistical_analysis.xls') # Mentési fájl helye
 
@@ -87,7 +87,7 @@ def statisztikai_elemzes_mentese(df):
     future_consumption_pred = model.predict(future_production)  # Jövőbeli fogyasztás előrejelzése
     rows.append({'Oszlop': 'Előrejelzés', 'Metrika': 'Fogyasztás 2025-re (termelés=565)', 'Érték': future_consumption_pred[0]})
 
-    # Excel fájl mentése
+    # Statisztikai számítások excel fájlba mentése
     wb = Workbook()
     ws = wb.active
     ws.title = "Statisztikai Elemzések"
