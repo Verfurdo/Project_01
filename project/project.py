@@ -1,4 +1,4 @@
-# project.py - Főprogram a Streamlit alkalmazáshoz
+# project.py - Főprogram (Streamlit alkalmazásindító fájl)
 
 # Szükséges modulok importálása
 import streamlit as st  # Streamlit és a modulok importálása a megjelenítéshez

@@ -1,6 +1,8 @@
+# start_project.py - Indítófájl
+
 # Szükséges modulok importálása
 import os         # Operációs rendszerrel kapcsolatos műveletekhez (fájlok elérési útjának kezelése)
-import subprocess # Külső parancsok futtatása Pythonból, (Streamlit alkalmazás indítása)
+import subprocess # Külső parancsok futtatása Pythonból (Streamlit alkalmazás indítása)
 import sys        # Rendszerspecifikus információk és műveletek (Python futtatókörnyezet elérési útjának lekérése)
 
 # A fájl dinamikus elérési útjának meghatározása

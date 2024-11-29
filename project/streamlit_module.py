@@ -1,4 +1,4 @@
-# streamlit_module.py - Elemzések és diagramok modul a Streamlit alkalmazáshoz
+# streamlit_module.py - Elemzések és diagramok modul függvények a főprogramnak
 
 from analysis.data_analysis import adatok_betoltese_elokeszitese  # Adatok betöltése és előkészítése függvény meghívása
 from analysis.data_analysis import statisztikai_elemzes_mentese  # Statisztikai elemzés mentése függvény meghívása

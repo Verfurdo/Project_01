@@ -1,4 +1,6 @@
-# Szükséges modulok és könyvtárak telepítése
+# install_modules.py - Könyvtárak telepítése
+
+# Szükséges modulok importálása
 import subprocess  # Alrendszeri parancsok futtatására szolgáló modul
 
 # Függvény a moduluk telepítéséhez

@@ -1,4 +1,4 @@
-# scatter_plot.py - Pontdiagram készítése lineáris regressziós illesztéssel
+# scatter_plot.py - Pontdiagram készítése lineáris regresszió illesztéssel
 
 # Szükséges könyvtárak importálása
 import matplotlib.pyplot as plt  # Grafikonok és ábrák készítéséhez szükséges könyvtár
